@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tic tac toe PHP</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<!--Custom files -->
+	<link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+	<div class="container">
+		<div id="description">
+			<h1>Tic tac toe with PHP</h1>
+			<p>
+				This game was made as my first php practice.
+				<br>
+				Design using HTML5 and <a href="https://getbootstrap.com">bootstrap 4</a> with some special css.
+			</p>
+		</div>
+		<div id="board">
+			<form action="tic-tac-toe.php" method="post">
+				<fieldset {game_finish}>
+					<table id="tic-tac-toe" class="table" disabled>
+						{board_contents}
+					</table>
+				</fieldset>
+			</form>
+		</div>
+		<br>
+		<div id="info-panel">
+			<div id="winner-panel">
+				{finish_text}
+			</div>
+			<form action="tic-tac-toe.php" method="POST">
+				<input id="btn-restart" class="btn btn-secondary" type="submit" name="restart" value="Restart" {btn-disable}>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

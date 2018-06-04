@@ -1,0 +1,31 @@
+#description {
+	text-align: center;
+}
+
+.table td {
+	text-align: center;
+
+}
+
+.table {
+	border-radius: 5px;
+    width: 50%;
+    margin: 0px auto;
+    float: none;
+}
+
+.btn {
+	width: 75px;
+	height: 75px;
+	font-size: 40px;
+}
+
+#info-panel {
+	text-align: center;
+}
+
+#btn-restart {
+	width: 100px;
+	height: 7%;
+	font-size: 20px;
+}
