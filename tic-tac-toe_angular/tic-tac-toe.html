@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tic tac toe PHP</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.10/angular.js"></script>
+	<!--Custom files -->
+	<link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+	<div class="container">
+		<div id="description">
+			<h1>Tic tac toe with PHP</h1>
+			<p>
+				This game was made as my first php practice.
+				<br>
+				Design using HTML5 and <a href="https://getbootstrap.com">bootstrap 4</a> (with some special css) and <a href="https://angularjs.org/">AngularJS</a>.
+			</p>
+		</div>
+		<div id="game" ng-app="app" ng-controller="ticTacToeController">
+			<div id="board">
+				<form method="post">
+					<fieldset ng-disabled="board_disabled">
+						<table id="tic-tac-toe" class="table">
+							<tr ng-repeat="row in board">
+								<td ng-repeat="cell in row track by $index">
+									<input class="btn {{ cell.color }}" name="{{ cell.name }}" value="{{ cell.value }}" type="submit" ng-click="selectCell(cell.name)" ng-disabled="cell.disabled">
+								</td>
+							</tr>
+						</table>
+					</fieldset>
+				</form>
+			</div>
+			<br>
+			<div id="info-panel">
+				<div id="winner-panel">
+					<div class="{{ finish_status }}">{{ finish_message }}</div>
+				</div>
+				<form ng-click="restart()">
+					<input id="btn-restart" class="btn btn-secondary" type="submit" name="restart" value="Restart">
+				</form>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="controller.js"></script>
+</body>
+</html>
